@@ -22,8 +22,16 @@ public class Movie {
                 throw new IllegalArgumentException("Incorrect Price Code");
         } 
     }
-private Price _price;
-    public String getTitle (){
-        return title;
-    };
+    private Price _price;
+        public String getTitle (){
+            return title;
+        };
+
+    /** Delegate charge and points to the Price strategy */
+    public double getCharge(int daysRented) {
+        return _price.getCharge(daysRented);
+    }
+    public int getFrequentRenterPoints(int daysRented) {
+        return _price.getFrequentRenterPoints(daysRented);
+    }
 }
