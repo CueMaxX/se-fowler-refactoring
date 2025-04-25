@@ -41,10 +41,10 @@ class Customer {
         return result;
     }
 
-    private double amountFor(Rental each) {
-        double thisAmount = 0;
-        thisAmount = amountFor(each, thisAmount);
-        return thisAmount;
+    private double amountFor(Rental aRental) {
+        double result = 0;
+        result = amountFor(aRental, result);
+        return result;
     }
     private double amountFor(Rental each, double thisAmount) {
         switch (each.getMovie().getPriceCode()) {
