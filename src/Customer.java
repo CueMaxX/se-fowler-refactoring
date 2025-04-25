@@ -21,14 +21,14 @@ class Customer {
         while (enum_rentals.hasMoreElements()) {
             Rental each = (Rental) enum_rentals.nextElement();
             //show figures for this rental
-            result += each.getMovie().getTitle() + ": " + String.valueOf(result += each.getCharge()) + "<BR>\n";
+            result += each.getMovie().getTitle() + ": " + String.valueOf(each.getCharge()) + "<BR>\n";
         }
         //add footer lines
         result += "<P>You owe <EM>" + String.valueOf(getTotalCharge()) + "</EM><P>\n";
-        result += "On this rental you earned <EM>" + String.valueOf(getTotalfrequentRenterPoints()) + "</EM> frequent renter points<P>";
+        result += "On this rental you earned <EM>" + String.valueOf(getTotalFrequentRenterPoints()) + "</EM> frequent renter points<P>";
         return result;
     }
-    private int getTotalfrequentRenterPoints() {
+    private int getTotalFrequentRenterPoints() {
         int result = 0;
         Enumeration enum_rentals = rentals.elements();
         while (enum_rentals.hasMoreElements()) {
