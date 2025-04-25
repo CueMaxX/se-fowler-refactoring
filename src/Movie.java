@@ -7,9 +7,6 @@ public class Movie {
         this.title = newtitle;
         setPriceCode(newpriceCode);
     }
-    public int getPriceCode() {
-        return _price.getPriceCode(); 
-    }
     public void setPriceCode(int arg) { 
         switch (arg) {
             case REGULAR:
